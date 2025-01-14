@@ -20,4 +20,4 @@ function _RouteData() : any {
 }
 
 
-export const CurrentRoute = $state(_RouteData())
+export const CurrentRoute = _RouteData()

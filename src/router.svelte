@@ -15,16 +15,7 @@
 </script>
 
 {#each routes as route}
-<div style="
-display: {CurrentRoute.MatchWithCurrent(route.path) ? "inherit" : "none"};
-height: inherit;
-width: inherit;
-flex-direction: inherit;
-margin: inherit;
-paddign: 0px;
-"
-id={"/"+route.path}
->
+{#if CurrentRoute.MatchWithCurrent(route.path)}
 <route.component/>
-</div>
+{/if}
 {/each}
